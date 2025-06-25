@@ -174,37 +174,34 @@ notes:
 ---
 ### Algorithm 1
 ```cpp
-  long long best = INT_MIN;
-  for (int i = 0; i < n; i++) {
-    for (int j = i; j < n; j++) {
-      long long sum = 0;
-      for (int k = i; k <= j; k++) {
-        sum += array[k];
-      }
-      best = max(best, sum);
+long long best = INT_MIN;
+for (int i = 0; i < n; i++) {
+  for (int j = i; j < n; j++) {
+    long long sum = 0;
+    for (int k = i; k <= j; k++) {
+      sum += array[k];
     }
+    best = max(best, sum);
   }
-
-  cout << best << "\n";
 }
 
+cout << best << "\n";
 ```
 O(n^3)
 
 ---
 ### Algorithm 2
 ```cpp
-  long long best = INT_MIN;
-  for (int i = 0; i < n; i++) {
-    long long sum = 0;
-    for (int j = i; j < n; j++) {
-      sum += array[j];
-      best = max(best, sum);
-    }
+long long best = INT_MIN;
+for (int i = 0; i < n; i++) {
+  long long sum = 0;
+  for (int j = i; j < n; j++) {
+    sum += array[j];
+    best = max(best, sum);
   }
+}
   
   cout << best << "\n";
-}
 
 ```
 O(n^2)
@@ -212,14 +209,13 @@ O(n^2)
 ---
 ### Algorithm 3
 ```cpp
-  long long best = INT_MIN, sum = 0;
-  for (int i = 0; i < n; i++) {
-    sum = max(array[i], sum + array[i]);
-    best = max(best, sum);
-  }
-
-  cout << best << "\n";
+long long best = INT_MIN, sum = 0;
+for (int i = 0; i < n; i++) {
+  sum = max(array[i], sum + array[i]);
+  best = max(best, sum);
 }
+
+cout << best << "\n";
 ```
 
 O(n)
