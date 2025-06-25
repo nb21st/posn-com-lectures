@@ -61,7 +61,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-#### O(n<sup>2</sup>)
+#### O(n^2)
 ```cpp
 for (int i = 0; i < n; i++) {
   for (int j = 0; j < n; j++) {
@@ -100,7 +100,7 @@ notes:
 Big O Notation ไม่สนว่าค่าจริงมันคือ 10n, n+5, n+300,000 เพราะสุดท้ายแล้ว อัตตราการเติมโตของโค๊ดพวกนี้ ก็เป็นแบบสมการเส้นตรง
 
 ---
-### O(n<sup>2</sup>) เพราะอัตตราการเติบโตเป็นกำลังสองเหมือนกัน
+### O(n^2) เพราะอัตตราการเติบโตเป็นกำลังสองเหมือนกัน
 ```cpp
 for (int i = 0; i < n*2; i++) {
   for (int j = 0; j < n*3; j++) {
@@ -121,7 +121,7 @@ notes:
 ---
 ### Big O Notation จะใช้เคสที่แย่ที่สุดเสมอ
 ---
-#### O(n<sup>2</sup>)
+#### O(n^2)
 ```cpp
 // O(n)
 for (int i = 0; i < n; i++) {
@@ -189,7 +189,7 @@ notes:
 }
 
 ```
-<p class="fragment">O(n<sup>3</sup>)</p>
+O(n^3)
 
 ---
 ### Algorithm 2
@@ -205,8 +205,10 @@ notes:
   
   cout << best << "\n";
 }
+
 ```
-<p class="fragment">O(n<sup>2</sup>)</p>
+O(n^2)
+
 ---
 ### Algorithm 3
 ```cpp
@@ -219,33 +221,17 @@ notes:
   cout << best << "\n";
 }
 ```
-<p class="fragment">O(n)</p>
+
+O(n)
+
 ---
 ### เปรียบเทียบเวลาจริง
 ![efficiency_comparison](/Assets/efficiency_comparison.png)
-<small>
-- Algorithm 1 = O(n<sup>3</sup>)
-- Algorithm 2 = O(n<sup>2</sup>)
+
+- Algorithm 1 = O(n^3)
+- Algorithm 2 = O(n^2)
 - Algorithm 3 = O(n)
 
-</small>
 ---
-## Thank You
-          </textarea>
-        </section>
-			</div>
-		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-        transition: 'none',
-        progress: true,
-        slideNumber: 'c/t',
-        controls: false,
+## Thank You
