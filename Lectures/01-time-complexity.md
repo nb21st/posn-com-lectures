@@ -46,22 +46,22 @@ notes:
 #### ทุกการดำเนินการที่เป็นค่าคงที่ คือ O(1)
 ```cpp
 int i = 10; // O(1)
-i = 100'000;    // O(1)
-cout << i; // O(1)
+i = 100000; // O(1)
+cout << i;  // O(1)
 ```
 
 notes:
 ทุกอย่างมันเริ่มด้วยงานง่ายๆ อย่างเช่นการประกาศตัวแปรด้วยค่าคงที่ แทนค่าคงที่ หรือพิมพ์ค่าคงที่ ทุกอย่างนี้ทำงานเพียงแค่ 1 ครั้งแล้วก็จบ ไม่มีการเติบโตทางจำนวนทั้งสิ้น
 
 ---
-#### O(n) เพราะ n เป็นตัวแปร/input
+#### O(n)
 ```cpp
 for (int i = 0; i < n; i++) {
   // โค๊ด O(1)
 }
 ```
 
-#### O(n^2)
+#### O(n<sup>2</sup>)
 ```cpp
 for (int i = 0; i < n; i++) {
   for (int j = 0; j < n; j++) {
@@ -100,7 +100,7 @@ notes:
 Big O Notation ไม่สนว่าค่าจริงมันคือ 10n, n+5, n+300,000 เพราะสุดท้ายแล้ว อัตตราการเติมโตของโค๊ดพวกนี้ ก็เป็นแบบสมการเส้นตรง
 
 ---
-### O(n^2) เพราะอัตตราการเติบโตเป็นกำลังสองเหมือนกัน
+### O(n<sup>2</sup>) เพราะอัตตราการเติบโตเป็นกำลังสองเหมือนกัน
 ```cpp
 for (int i = 0; i < n*2; i++) {
   for (int j = 0; j < n*3; j++) {
@@ -121,7 +121,7 @@ notes:
 ---
 ### Big O Notation จะใช้เคสที่แย่ที่สุดเสมอ
 ---
-#### O(n^2)
+#### O(n<sup>2</sup>)
 ```cpp
 // O(n)
 for (int i = 0; i < n; i++) {
@@ -143,7 +143,6 @@ notes:
 ในกรณีที่มี O หลายตัวเรียงกัน ให้นับ O ที่มีค่าสูงที่สุด อย่างในกรณีนี้ จะได้เท่ากับว่าโค๊ดทั้งหมดนี้มีค่าเป็น O(n^2)
 
 ---
-### กรณีมีหลายตัวแปร
 #### O(n * m)
 ```cpp
 for (int i = 0; i < n; i++) {
@@ -157,13 +156,13 @@ notes:
 บางทีเราอาจจะต้องใช้หลายตัวแปรอย่างเช่นออกอริทึมกราฟที่เราจะได้เรียนกัน ก็ให้นับตัวแปรทั้งหมดไปด้วย
 
 ---
-### วิธีหา O ฟังก์ชั่นหรือออกอริทึมที่ถูกคิดค้นไว้แล้ว
+### Big O Notation ใช้กับพวกนี้ก็ได้อีก
 - ฟังก์ชั่น Standard Template Library อย่างเช่น [sort()](https://en.cppreference.com/w/cpp/algorithm/sort.html) หาดูได้จาก [cppreference.com](https://en.cppreference.com)
 - ออกอริทึมที่เป็นที่นิยมอย่างเช่น [Binary Search](https://en.wikipedia.org/wiki/Binary_search) หรือ [Dikstra's Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 - STL Containers: [บทความ GeeksForGeeks](https://www.geeksforgeeks.org/analysis-of-time-and-space-complexity-of-stl-containers/), [alyssaq.github.io/stl-complexities/](https://alyssaq.github.io/stl-complexities/)
 
 ---
-## คาดการ Big O ของคำตอบด้วยข้อจำกัดของโจทย์
+#### คาดการ Big O ของคำตอบด้วยข้อจำกัดของโจทย์
 ![solution_complexity_estimation](/Assets/solution_complexity_estimation.png)
 
 notes:
@@ -190,7 +189,7 @@ notes:
 }
 
 ```
-### O(n^3)
+<p class="fragment">O(n<sup>3</sup>)</p>
 
 ---
 ### Algorithm 2
@@ -207,7 +206,7 @@ notes:
   cout << best << "\n";
 }
 ```
-### O(n^2)
+<p class="fragment">O(n<sup>2</sup>)</p>
 ---
 ### Algorithm 3
 ```cpp
@@ -220,13 +219,33 @@ notes:
   cout << best << "\n";
 }
 ```
-### O(n)
+<p class="fragment">O(n)</p>
 ---
-## เปรียบเทียบเวลาจริง
+### เปรียบเทียบเวลาจริง
 ![efficiency_comparison](/Assets/efficiency_comparison.png)
-- Algorithm 1 = O(n^3)
-- Algorithm 2 = O(n^2)
+<small>
+- Algorithm 1 = O(n<sup>3</sup>)
+- Algorithm 2 = O(n<sup>2</sup>)
 - Algorithm 3 = O(n)
 
+</small>
 ---
 ## Thank You
+          </textarea>
+        </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+        transition: 'none',
+        progress: true,
+        slideNumber: 'c/t',
+        controls: false,
