@@ -44,6 +44,15 @@ for (auto x : v) {
 ```
 
 ---
+วิธีเขียน vector จาก input แบบสั้นๆ
+```cpp
+vector<int> v(n);
+for (auto& x : v) cin >> x;
+```
+
+```
+```
+---
 อ่าน/ลบ ค่าท้ายสุด
 ```cpp
 vector<int> v;
